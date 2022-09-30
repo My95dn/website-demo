@@ -274,6 +274,11 @@ html {
 
     
 }
+#content .navigation-tour .list-grow:hover {
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+}
 #content .navigation-tour .item-nav {
     width: 100%;
     border-radius: 2px;
