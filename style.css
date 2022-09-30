@@ -48,9 +48,12 @@ html {
     padding: 0 30px;
     font-size: 1rem;
     font-weight: 300;
+    transition: 0.5s;
+    
 }
 .list-header li:hover  {
     background-color: #b6b4b4;
+    transform: translateY(3px);
     
     
     
@@ -60,6 +63,7 @@ html {
     color: #000;
 }
 .list-header li:hover  .sub-header  {
+    
     
     display: block;
     
@@ -90,7 +94,8 @@ html {
     box-shadow: 1px 1px 1px 1px rgba(8, 8, 8, 0.3);
     border: 1px solid #333;
     border-radius: 3px;
-    
+    transform: translateX(-3px);
+    transition: 0.5s;
     
 
     
@@ -101,6 +106,14 @@ html {
     color: #fff;
     font-size: 30px;
     
+}
+#header .list-header .fa-text {
+    margin-left: 2px;
+    font-size: 1.2rem;
+    
+    
+    line-height: 1.2rem;
+    padding: 3px 2px;
 }
 .list-header:hover .fa-sharp {
     color: #000;
