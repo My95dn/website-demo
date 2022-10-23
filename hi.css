@@ -225,7 +225,7 @@
     
     #header .menu-header {
         position: absolute;
-        left: -52px;
+        left: -54px;
         top: 11px;
         font-size: 2.5rem;
         width: 40px;
@@ -684,7 +684,7 @@
 } 
 @media (max-width: 23.75em) {
     #header .sub-header .text-input {
-        width: 290px;
+        width: 270px;
         margin-right: 15px;
     }
     #content .item-tech .text-link {
