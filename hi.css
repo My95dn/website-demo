@@ -687,7 +687,7 @@
         margin-right: 15px;
     }
     #header .sub-icon {
-        padding-right: 5px;
+        padding-right: 0;
     }
     #content .item-tech .text-link {
         font-size: 0.75rem;
