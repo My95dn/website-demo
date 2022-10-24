@@ -626,6 +626,7 @@ html {
 }
 #content .section-tech .list-tech {
     display: flex;
+    padding-left: 20px;
 }
 #content .section-tech .item-tech {
     display: grid;
@@ -681,7 +682,7 @@ html {
    display: grid;
    grid-template-columns: repeat(2, 340px);
    grid-template-rows: repeat(4, 98px);
-   gap: 10px;
+   
 
 }
 #content .section-tech .title {
