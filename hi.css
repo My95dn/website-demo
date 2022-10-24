@@ -39,6 +39,8 @@
     }
     #header .sub-icon {
         transform: translateY(4px);
+        padding-right: 0;
+        
     }
     #header .header-nav {
         display: block;
@@ -246,7 +248,8 @@
        position: absolute;
        right: 10px;
        top: -40px;
-       
+       padding-left: 0;
+        margin-left: 10px;
     }
     .true-img {
         width: 100%;
