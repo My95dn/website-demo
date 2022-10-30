@@ -184,14 +184,14 @@
        flex-direction: column;
     }
     #content .footer-text {
-        padding-left: 35px;
+        padding-left: 43px;
     }
     #content .img-footer {
         margin-left: 80px;
     }
     #footer .fa-location-arrow {
         position: absolute;
-        right: 35px;
+        right: 32px;
         top: 36px;
         color: #fff;
         font-size: 1.5rem;
@@ -200,8 +200,11 @@
     
     #footer .footer-support {
         padding-bottom: 20px;
-        padding: 0 35px;
+        padding: 0 31px;
 
+    }
+    #footer .footer-info {
+        transform: translateX(-12px);
     }
     #header .fa-bars {
         display: block;
@@ -213,7 +216,7 @@
        display: none;
     }
     #footer .footer-navbar {
-        padding: 50px 35px;
+        padding: 50px 31px;
     }
     #content .main-text-filter {
         padding: 0 10px;
@@ -227,4 +230,55 @@
         padding-right: 10px;
     }
    
+}
+@media (max-width:  23.4375em) {
+    #slider .render-cart {
+        display: block;
+        width: 360px;
+        position: absolute;
+        bottom: -68px;
+        right: 7px;
+        background-color: rgba(0, 67, 149, 0.7);
+        border-bottom: 4px solid #f9c322;
+        height: 511px;
+    }
+    #content .app-sub .text-cart {
+        position: absolute;
+        top: 235px;
+        right: 13px;
+        padding: 6px;
+        background-color: #f9c322;
+        color: #000;
+        font-weight: 500;
+        font-size: 0.88rem;
+    }
+    #content .text-home {
+        position: absolute;
+        right: 13px;
+        top: 237px;
+        padding: 6px;
+        background-color: #f9c322;
+        color: #000;
+        font-weight: 500;
+        font-size: 0.88rem;
+    }
+    #content .home-sub {
+        position: absolute;
+        right: 13px;
+        top: 223px;
+        padding: 6px;
+        background-color: #f9c322;
+        color: #000;
+        font-weight: 500;
+        font-size: 0.88rem;
+    }
+    #footer .footer-text {
+        padding-left: 35px;
+    }
+    #footer .footer-support {
+        padding: 0 23px;
+    }
+    #footer .content-navbar {
+        padding: 50px 31px;
+    }
 }
