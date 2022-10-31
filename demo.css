@@ -537,7 +537,7 @@ html {
 }
 #footer .img-footer {
     text-align: center;
-    transform: translateX(-50px);
+    transform: translateX(-20px);
    
 }
 #footer .footer-navbar-sub {
@@ -559,7 +559,7 @@ html {
 #footer .footer-cart {
     padding-bottom: 20px;
 }
-#footer .footer-navbar {
+#footer .footer-navbar li{
     list-style: none;
     font-size: 0.88rem;
     color: #fff;
@@ -570,7 +570,7 @@ html {
     margin-bottom: 10px;
    
 }
-#footer .footer-contact {
+#footer .footer-navbar .footer-contact {
     margin-bottom: 25px;
     font-size: 1.25rem;
     font-weight: 500;
