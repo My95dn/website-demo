@@ -230,7 +230,7 @@ html {
 #content .navigation-content .content-text-sub {
     background-color: #fff;
     padding: 10px 0;
-    transform: translateY(-4px);
+    transform: translateY(-5px);
 }
 #content .navigation-content .navigation-cart {
     width: calc(100% / 3);

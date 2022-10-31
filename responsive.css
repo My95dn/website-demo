@@ -20,6 +20,7 @@
     }
     #header .nav {
        padding-right: 20px;
+       display: flex;
     }
     #slider .slider-sub {
         position: relative;
@@ -90,7 +91,7 @@
         position: absolute;
         
         bottom: 35px;
-        right: 15px;
+        right: 14px;
         background-color: rgba(0, 67, 149, 0.7);
         border-bottom: 4px solid #f9c322;
         height: 511px;
@@ -236,7 +237,7 @@
         display: block;
         width: 360px;
         position: absolute;
-        bottom: -68px;
+        bottom: 35px;
         right: 7px;
         background-color: rgba(0, 67, 149, 0.7);
         border-bottom: 4px solid #f9c322;
@@ -281,4 +282,63 @@
     #footer .content-navbar {
         padding: 50px 31px;
     }
+    #footer .fa-location-arrow {
+        position: absolute;
+        right: 19px;
+        top: 36px;
+        color: #fff;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+}
+@media (max-width: 25.875em) {
+    #slider .render-cart {
+        display: block;
+        width: 360px;
+        position: absolute;
+        bottom: 35px;
+        right: 9px;
+        background-color: rgba(0, 67, 149, 0.7);
+        border-bottom: 4px solid #f9c322;
+        height: 511px;
+    }
+    #content .app-sub .text-cart {
+        position: absolute;
+        top: 235px;
+        right: 13px;
+        padding: 6px;
+        background-color: #f9c322;
+        color: #000;
+        font-weight: 500;
+        font-size: 0.88rem;
+    }
+    #content .text-home {
+        position: absolute;
+        right: 13px;
+        top: 236px;
+        padding: 6px;
+        background-color: #f9c322;
+        color: #000;
+        font-weight: 500;
+        font-size: 0.88rem;
+    }
+    #content .home-sub {
+        position: absolute;
+        right: 13px;
+        top: 222px;
+        padding: 6px;
+        background-color: #f9c322;
+        color: #000;
+        font-weight: 500;
+        font-size: 0.88rem;
+    }
+    #footer .fa-location-arrow {
+        position: absolute;
+        right: 48px;
+        top: 36px;
+        color: #fff;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+   
 }
