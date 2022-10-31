@@ -233,6 +233,7 @@ html {
     background-color: #fff;
     padding: 10px 0;
     transform: translateY(-6px);
+    
 }
 #content .navigation-content .navigation-cart {
     width: calc(100% / 3);

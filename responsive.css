@@ -302,6 +302,9 @@
         border-bottom: 4px solid #f9c322;
         height: 511px;
     }
+    #content .content-text-sub {
+        height: 52px;
+    }
     #content .app-sub .text-cart {
         position: absolute;
         top: 265px;
