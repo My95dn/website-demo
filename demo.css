@@ -37,6 +37,7 @@ html {
     list-style: none;
     padding-right: 15px;
     
+    padding-left: 10px;
 }
 #header .header-text li {
    display: inline-block;
@@ -67,6 +68,7 @@ html {
 #header label {
     display: none;
 }
+
 #header input {
     display: none;
 }
@@ -230,7 +232,7 @@ html {
 #content .navigation-content .content-text-sub {
     background-color: #fff;
     padding: 10px 0;
-    transform: translateY(-5px);
+    transform: translateY(-6px);
 }
 #content .navigation-content .navigation-cart {
     width: calc(100% / 3);
@@ -583,7 +585,7 @@ html {
 }
 #footer .fa-location-arrow {
     position: absolute;
-    right: 122px;
+    right: 52px;
     top: 36px;
     color: #fff;
     font-size: 1.5rem;
