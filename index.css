@@ -34,6 +34,15 @@ html {
     bottom: -49px;
    
 }
+#header .header-text-sub {
+    display: none;
+    line-height: 76px;
+    max-height: 120px;
+    
+}
+#header .header-content-contact {
+    display: none;
+}
 #header .header-content {
     display: flex;
     justify-content: space-between;

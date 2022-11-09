@@ -8,6 +8,7 @@
     }
     #header {
         overflow: hidden;
+        height: 150px;
     }
     #slider {
         overflow: hidden;
@@ -123,17 +124,36 @@
         
         
     }
-     
-    #header .header-text {
-        display: grid;
-        grid-template-rows: repeat(2, 50px);
+    #header .header-text-sub {
+        display: block;
+        margin: 0 10px;
+        transform: translateY(-7px);
+    }
+    #header .header-content {
+        display: none;
+    }
+    #header .header-content-contact {
+        display: block;
+        
         
     }
     #header .header-input {
-        width: 192%;
-        left: -180px;
-       order: 2;
-        top: -20px;
+        width: 100%;
+        
+    }
+    #header .img-sub {
+        width: 40%;
+        margin-left: 10px;
+    }
+    #header .header-navigation {
+        display: flex;
+        justify-content: space-between;
+    }
+    #header .header-cart {
+        transform: translateY(-9px);
+    }
+    #header .header-input {
+       
         
        
     }
