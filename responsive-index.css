@@ -142,7 +142,7 @@
         
     }
     #header .img-sub {
-        width: 40%;
+        
         margin-left: 10px;
     }
     #header .header-navigation {
@@ -172,7 +172,7 @@
         align-items: flex-end;
     }
     #header .img-content   {
-        width: 100%;
+        width: 55%;
         
     }
     #header .header-cart-sub {
