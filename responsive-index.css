@@ -62,7 +62,8 @@
         position: absolute;
         right: 17px;
         top: 12px;
-
+        text-decoration: none;
+        color: #fff;
     }
     #header .header-login-text {
         display: flex;
