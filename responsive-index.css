@@ -6,6 +6,18 @@
     #container {
         overflow: hidden;
     }
+    #header {
+        overflow: hidden;
+    }
+    #slider {
+        overflow: hidden;
+    }
+    #content {
+        overflow: hidden;
+    }
+    #footer {
+        overflow: hidden;
+    }
     #header .header-login-sub {
         display: block;
     }
