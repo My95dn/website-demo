@@ -127,7 +127,7 @@
     #header .header-text-sub {
         display: block;
         margin: 0 10px;
-        transform: translateY(-7px);
+        transform: translateY(-14px);
     }
     #header .header-content {
         display: none;
