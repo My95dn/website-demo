@@ -253,11 +253,23 @@
     #content .app-section-cart {
         display: grid;
         grid-template-columns: repeat(5, 175px);
+        grid-template-rows: repeat(1, 217px);
         overflow-x: auto;
         scroll-snap-type: x mandatory;
         padding-bottom: 15px;
         margin-left: 7px;
         margin-right: 7px;
+    }
+    #content .img-app-content {
+        position: relative;
+    }
+    #content .app-content:hover .icon-main-selec {
+        display: flex;
+        
+    }
+    #content .icon-main-selec {
+        position: absolute;
+        right: 35px;
     }
     #content .app-cart-section {
        margin-bottom: 10px;
