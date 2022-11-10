@@ -306,6 +306,9 @@ html {
 #slider .slider-img {
     text-align: center;
 }
+#content .slect .my-link {
+    display: none;
+}
 #content .content-sub {
     margin-bottom: 75px;
 }

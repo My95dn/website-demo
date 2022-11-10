@@ -222,9 +222,13 @@
        overflow-x: auto;
        
     }
+    #content .slect .my-link {
+        display: block;
+    }
     #content .my-link {
         text-decoration: none;
         color: #000;
+        
     }
     
     #content .fa-xmark {
@@ -246,6 +250,7 @@
         right: 38px;
         top: 28px;
         font-size: 1.5rem;
+        
     }
     
     #content .img-content-sub {
