@@ -460,7 +460,7 @@
     }
     .moudal {
        display: block;
-       visibility: hidden;
+       
         overflow-y: auto;
         scroll-snap-type: y mandatory;
         top: 0;
@@ -468,7 +468,7 @@
         bottom: 0;
         right: 0;
         background-color: #fff;
-        opacity: 0;
+        
         position: fixed;
         animation: moudal linear 0.5s; 
        z-index: 10;
