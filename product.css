@@ -49,12 +49,45 @@ html {
     letter-spacing: 3px;
     position: relative;
 }
-#header .header-section > li > a::before {
+#header .header-link-sub3::before {
     content: "";
     position: absolute;
-    right: 1px;
+    right: 2px;
     bottom: -4px;
-    width: 92px;
+    width: 90px;
+    height: 1px;
+   border-bottom: 1px solid #00081c;
+   transition: all linear 0.2s;
+   transform: scale(0);
+}
+#header .header-link-sub4::before {
+    content: "";
+    position: absolute;
+    right: 4px;
+    bottom: -4px;
+    width: 71px;
+    height: 1px;
+   border-bottom: 1px solid #00081c;
+   transition: all linear 0.2s;
+   transform: scale(0);
+}
+#header .header-link-sub5::before {
+    content: "";
+    position: absolute;
+    right: 3px;
+    bottom: -4px;
+    width: 70px;
+    height: 1px;
+   border-bottom: 1px solid #00081c;
+   transition: all linear 0.2s;
+   transform: scale(0);
+}
+#header .header-section .header-link-sub::before {
+    content: "";
+    position: absolute;
+    right: 3px;
+    bottom: -4px;
+    width: 103px;
     height: 1px;
    border-bottom: 1px solid #00081c;
    transition: all linear 0.2s;
