@@ -1085,6 +1085,135 @@ html {
     margin-top: 30px;
     margin-bottom: 30px;
 }
+.container-sub {
+    position: fixed;
+    z-index: 99;
+    left: 16px;
+    bottom: 40px;
+}
+
+.fa-facebook-messenger {
+    color: #fff;
+    background-color: #5890ff;
+    font-size: 0.88rem;
+    padding: 12px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    animation: iconsub 1s infinite ease-in-out;
+    transition: iconsub 1s;
+   
+    border: 3px solid #fff;
+    box-shadow: 0 5px 30px -5px #dadada;
+    
+}
+.fa-twitter {
+    color: #5890ff;
+    background-color: #fff;
+    font-size: 0.88rem;
+    padding: 12px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    animation: iconsub 1s infinite ease-in-out;
+    transition: iconsub 1s;
+   
+    border: 3px solid;
+    box-shadow: 0 5px 30px -5px #dadada;
+}
+.fa-phone {
+    color: #fff;
+    background-color: #f00;
+    font-size: 0.88rem;
+    padding: 12px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    
+    position: relative;
+    border: 3px solid #fff;
+    animation: phone linear 1s infinite;
+}
+.container-text::before {
+    content: "";
+    position: absolute;
+    top: -13px;
+    left: -13px;
+    background-color: #f00;
+    width: 70px;
+    
+    height: 70px;
+    animation: contact 1.5s infinite ease;
+    border-radius: 50%;
+    transition: all 1s;
+    
+}
+@keyframes iconsub {
+    0% {
+        transform: rotate(0deg) scale(0.7);
+        
+    }
+    10% {
+        transform: rotate(20deg);
+    }
+    20% {
+        transform: rotate(-20deg);
+    }
+    30% {
+        transform: rotate(20deg);
+    }
+    40% {
+        transform: rotate(-20deg);
+    }
+    50% {
+        transform: rotate(0deg) scale(1);
+        
+    }
+    100% {
+        transform: rotate(0deg) scale(0.7);
+    }
+}
+@keyframes phone {
+    0% {
+        transform: rotate(0deg);
+        
+    }
+    10% {
+        transform: rotate(20deg);
+    }
+    20% {
+        transform: rotate(-20deg);
+    }
+    30% {
+        transform: rotate(20deg);
+    }
+    40% {
+        transform: rotate(-20deg);
+    }
+    50% {
+        transform: rotate(0deg);
+        
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+@keyframes contact {
+    0% {
+        transform: scale(0.7);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 0.3;
+    }
+    120% {
+        transform: scale(0.1);
+        opacity: 0.5;
+    }
+}
+
 
 
 
