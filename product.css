@@ -19,6 +19,12 @@ html {
     text-align: center;
     line-height: 46px;
 }
+.xmark {
+    display: none;
+}
+#header .header-new {
+    display: none;
+}
 #header .header-link {
     text-decoration: none;
     color: #fff;
@@ -342,6 +348,10 @@ html {
     left: 54px;
     border: 4px solid #e9e9e9;
 }
+#content .img-cart-coppy {
+    display: none;
+}
+
 #content .content-nav-item6::before {
     width: 18px;
     position: absolute;
@@ -1106,7 +1116,7 @@ html {
     box-shadow: 0 5px 30px -5px #dadada;
     
 }
-.fa-twitter {
+.container-content {
     color: #5890ff;
     background-color: #fff;
     font-size: 0.88rem;
