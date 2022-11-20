@@ -1114,7 +1114,7 @@ html {
    
     border: 3px solid #fff;
     box-shadow: 0 5px 30px -5px #dadada;
-    
+    cursor: pointer;
 }
 .container-content {
     color: #5890ff;
@@ -1125,7 +1125,7 @@ html {
     margin-bottom: 10px;
     animation: iconsub 1s infinite ease-in-out;
     transition: iconsub 1s;
-   
+   cursor: pointer;
     border: 3px solid;
     box-shadow: 0 5px 30px -5px #dadada;
 }
@@ -1136,7 +1136,7 @@ html {
     padding: 12px;
     border-radius: 50%;
     margin-bottom: 10px;
-    
+    cursor: pointer;
     position: relative;
     border: 3px solid #fff;
     animation: phone linear 1s infinite;
