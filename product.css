@@ -1246,7 +1246,47 @@ html {
         opacity: 0.5;
     }
 }
-
+.navbar-img-item06 {
+    width: 85%;
+}
+.navbar-img-cart01 {
+    width: 85%;
+}
+.navbar-img-four04 {
+    width: 85%;
+}
+.navbar-img-item012 {
+    width: 85%;
+}
+.navbar-img-item000 {
+    width: 85%;
+}
+.overflow {
+    position: fixed;
+    z-index: 200;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    
+}
+.img-watch {
+    position: fixed;
+    top: 200px;
+    left: 35%;
+    background-color: #fff;
+    padding: 50px 100px;
+    z-index: 300;
+    width: 30%;
+   
+}
+.app {
+    display: none;
+}
+.overflow {
+    cursor: pointer;
+}
 
 
 
