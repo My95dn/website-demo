@@ -294,6 +294,17 @@ html {
     left: 15px;
     border: 4px solid #e9e9e9;
 }
+#content .content-nav-favorite2::before {
+    width: 18px;
+    position: absolute;
+    content: "";
+    height: 18px;
+    background-color: #007947;
+    border-radius: 50px;
+    top: 0;
+    left: 15px;
+    border: 4px solid #e9e9e9;
+}
 #content .content-nav-favorite:hover::before {
     transform: scale(1.2);
 }
@@ -302,7 +313,19 @@ html {
     position: absolute;
     content: "";
     height: 18px;
-    background-color: green;
+    background-color: #007947;
+    border-radius: 50px;
+    top: 0;
+    left: 33px;
+    border: 4px solid #e9e9e9;
+    
+}
+#content .content-nav-three2::before {
+    width: 18px;
+    position: absolute;
+    content: "";
+    height: 18px;
+    background-color: #000;
     border-radius: 50px;
     top: 0;
     left: 33px;

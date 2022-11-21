@@ -47,7 +47,10 @@
         background-color: #00081c;
         color: #fff;
         border-radius: 50%;
-
+        
+    }
+    #header .xmark {
+        display: block;
     }
     #header .header-section li {
         display: block;
@@ -151,7 +154,7 @@
     #content .content-navbar {
         display: grid;
         grid-template-columns: repeat(2, 180px);
-        padding: 0 12px;
+        padding-left: 6px;
     }
     #content .content-nav-true {
         margin-top: 24px;
