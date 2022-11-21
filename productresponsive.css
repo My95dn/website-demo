@@ -154,7 +154,7 @@
     #content .content-navbar {
         display: grid;
         grid-template-columns: repeat(2, 180px);
-        padding-left: 6px;
+        padding: 0 5px;
     }
     #content .content-nav-true {
         margin-top: 24px;
@@ -212,6 +212,10 @@
         top: 0;
         width: 85%;
         display: none;
+    }
+    #content .content-cart-true {
+        left: 7px;
+        width: 100%;
     }
     #content .content-cart-like {
         flex-wrap: wrap;
