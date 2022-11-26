@@ -28,7 +28,7 @@ const app = {
         {
             name: 'Cuối Cùng Thì',
             singer: 'vicetone',
-            path: './music/song3.mp3',
+            path: './music/cuoicungthi.mp3',
             image: './img/img.jpg'
     
         },
@@ -124,6 +124,7 @@ const app = {
             itedurations: Infinity
         }
         )
+        
         cdthum.pause()
         play.onclick = function() {
             if(_this.isplaying) {
@@ -185,7 +186,16 @@ const app = {
             _this.isRepeat = !_this.isRepeat
             btnRpeat.classList.toggle('active', _this.isRepeat)
         }
-
+        audio.onended = function() {
+            if(_this.isRepeat) {
+                audio.play()
+            } else {
+                _this.nextSong()
+                audio.play()
+            }
+           
+            
+        }
     },
     randomSong: function() {
         
