@@ -39,6 +39,7 @@
     }
     #header .sub-nav .sub-navbar {
         display: none;
+       
     }
     #header .sub-icon {
         transform: translateY(4px);

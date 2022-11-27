@@ -12,6 +12,9 @@ const btnnext = many('.btn-next')
 const btnprev = many('.btn-prev')
 const btnrandom = many('.btn-random')
 const btnRpeat = many('.btn-repeat')
+const song = many('.song')
+let active = many('.song.active')
+
 const app = {
     isplaying: false,
     israndomSong: false,
@@ -83,9 +86,9 @@ const app = {
         }
     ],   
     render: function() {
-        const htmls = this.songs.map(song => {
+        const htmls = this.songs.map((song, index) => {
             return `
-            <div class="song">
+            <div class="song ${index === this.iscurrentIndex ? 'active' : 0}" data-index="${index}">
             <div class="thumb" style="background-image: url('https://i.ytimg.com/vi/jTLhQf5KJSc/maxresdefault.jpg')">
             </div>
             <div class="body">
@@ -118,10 +121,11 @@ const app = {
         }
         
         const cdthum = cdthumb.animate([
-            {transform: 'rotate(380deg)'}
+            {transform: 'rotate(360deg)',}
         ], {
             duration: 10000,
-            itedurations: Infinity
+            itedurations: Infinity,
+            
         }
         )
         
@@ -140,6 +144,8 @@ const app = {
                 
             } else {
                 _this.leftSong()
+                _this.render()
+                _this.scrollview()
             }
             
             audio.play()
@@ -150,6 +156,9 @@ const app = {
                 
             } else {
                 _this.nextSong()
+                _this.render()
+                _this.scrollview()
+              
             }
             
             audio.play()
@@ -196,6 +205,7 @@ const app = {
            
             
         }
+      
     },
     randomSong: function() {
         
@@ -216,11 +226,21 @@ const app = {
         
         
     },
-    
+    scrollview: function() {
+        setTimeout(() => {
+            many('.song.active').scrollIntoView({
+                behavior: 'smooth',
+                block: 'nearest',
+            })
+        }, 300)
+
+        
+    },
     nextSong: function() {
         this.iscurrentIndex++
         if(this.iscurrentIndex >= this.songs.length) {
             this.iscurrentIndex = 0
+           
         }
         this.loaddow()
         
