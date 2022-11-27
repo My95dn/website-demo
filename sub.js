@@ -36,23 +36,23 @@ const app = {
     
         },
         {
-            name: '3',
+            name: 'Túy Âm',
             singer: 'vicetone',
-            path: './music/song.mp3',
+            path: './music/song1.mp3',
             image: './img/img.jpg'
     
         },
         {
-            name: '4',
+            name: 'Có Tất Cả Nhưng Thiếu Em',
             singer: 'vicetone',
-            path: './music/song.mp3',
+            path: './music/song2.mp3',
             image: './img/img.jpg'
     
         },
         {
-            name: '5',
+            name: 'Waiting For You',
             singer: 'vicetone',
-            path: './music/song.mp3',
+            path: './music/song3.mp3',
             image: './img/img.jpg'
     
         },
@@ -120,11 +120,12 @@ const app = {
             cd.style.opacity = newscroll / cdWidth
         }
         
-        const cdthum = cdthumb.animate([
-            {transform: 'rotate(360deg)',}
+        const cdthum = cd.animate([
+            {transform: 'rotate(360deg)'} 
         ], {
             duration: 10000,
-            itedurations: Infinity,
+            iterations: Infinity, 
+           
             
         }
         )
@@ -146,6 +147,7 @@ const app = {
                 _this.leftSong()
                 _this.render()
                 _this.scrollview()
+               
             }
             
             audio.play()
@@ -158,7 +160,7 @@ const app = {
                 _this.nextSong()
                 _this.render()
                 _this.scrollview()
-              
+                
             }
             
             audio.play()
@@ -174,6 +176,8 @@ const app = {
             _this.isplaying = true
             player.classList.add('playing')
             cdthum.play()
+            
+            _this.audiotime(date);
         }
         audio.ontimeupdate = function() {
            if(audio.duration) {
@@ -205,6 +209,18 @@ const app = {
            
             
         }
+        playlist.onclick = function(e) {
+            const custom = e.target.closest('.song:not(.active)')
+            if(custom || e.target.closest('.option')) {
+                if(custom) {
+                    _this.iscurrentIndex = Number(custom.dataset.index)
+                    _this.loaddow()
+                    _this.render()
+                    audio.play()
+                }
+            }
+
+        }
       
     },
     randomSong: function() {
@@ -213,7 +229,7 @@ const app = {
         do {
              subrandom = Math.floor(Math.random() * this.songs.length)
              
-        } while (subrandom === this.iscurrentIndex) 
+        } while (this.iscurrentIndex === subrandom) 
             
             
         this.iscurrentIndex = subrandom
@@ -225,6 +241,12 @@ const app = {
         
         
         
+    },
+    audiotime: function() {
+        let date = audio.duration;
+        setInterval(() => {
+            many('.showtime').innerHTML = Math.floor(audio.currentTime)+ '/' +Math.floor((date/60))+ ':' + Math.floor(date%60);
+        }, 1000)
     },
     scrollview: function() {
         setTimeout(() => {

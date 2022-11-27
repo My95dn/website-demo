@@ -189,3 +189,9 @@
    
   }
   
+  .animate{
+    transform: rotate(360deg);
+    animation-duration: 10000;
+    
+  }
+  
