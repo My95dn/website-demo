@@ -30,58 +30,58 @@ const app = {
         },
         {
             name: 'Cuối Cùng Thì',
-            singer: 'vicetone',
+            singer: 'Jack',
             path: './music/cuoicungthi.mp3',
-            image: './img/img.jpg'
+            image: './img/cd80.jpg'
     
         },
         {
             name: 'Túy Âm',
-            singer: 'vicetone',
+            singer: 'Masnew',
             path: './music/song1.mp3',
-            image: './img/img.jpg'
+            image: './img/cd11.jpg'
     
         },
         {
             name: 'Có Tất Cả Nhưng Thiếu Em',
-            singer: 'vicetone',
+            singer: 'Erik',
             path: './music/song2.mp3',
-            image: './img/img.jpg'
+            image: './img/cd10.jpg'
     
         },
         {
             name: 'Waiting For You',
-            singer: 'vicetone',
+            singer: 'MoNo',
             path: './music/song3.mp3',
-            image: './img/img.jpg'
+            image: './img/cd20.jpg'
     
         },
         {
-            name: '6',
-            singer: 'vicetone',
-            path: './music/song.mp3',
-            image: './img/img.jpg'
+            name: 'Là Anh',
+            singer: 'Mộng Nhiên',
+            path: './music/song4.mp3',
+            image: './img/cd30.jpg'
     
         },
         {
-            name: '7',
-            singer: 'vicetone',
-            path: './music/song.mp3',
-            image: './img/img.jpg'
+            name: 'Đau Ở Đây Này',
+            singer: 'NAL',
+            path: './music/song5.mp3',
+            image: './img/cd40.jpg'
     
         },
         {
-            name: '8',
-            singer: 'vicetone',
-            path: './music/song.mp3',
-            image: './img/img.jpg'
+            name: 'Hôm Nay Em Rất Mẹt',
+            singer: 'Như Thùy',
+            path: './music/song6.mp3',
+            image: './img/cd50.jpg'
     
         },
         {
-            name: '9',
-            singer: 'vicetone',
-            path: './music/song.mp3',
-            image: './img/img.jpg'
+            name: 'Phía Sau Một Cô Gái',
+            singer: 'Vương Anh Tú',
+            path: './music/song7.mp3',
+            image: './img/cd60.jpg'
     
         }
     ],   
@@ -89,7 +89,7 @@ const app = {
         const htmls = this.songs.map((song, index) => {
             return `
             <div class="song ${index === this.iscurrentIndex ? 'active' : 0}" data-index="${index}">
-            <div class="thumb" style="background-image: url('https://i.ytimg.com/vi/jTLhQf5KJSc/maxresdefault.jpg')">
+            <div class="thumb" style="background-image: url('${song.image}')">
             </div>
             <div class="body">
               <h3 class="title">${song.name}</h3>
@@ -136,6 +136,7 @@ const app = {
                 audio.pause()
             } else {
                 audio.play()
+                _this.audiotime(audio.duration)
             }
             
         }
@@ -177,7 +178,7 @@ const app = {
             player.classList.add('playing')
             cdthum.play()
             
-            _this.audiotime(date);
+            
         }
         audio.ontimeupdate = function() {
            if(audio.duration) {
@@ -219,7 +220,7 @@ const app = {
                     audio.play()
                 }
             }
-
+            
         }
       
     },
@@ -245,7 +246,7 @@ const app = {
     audiotime: function() {
         let date = audio.duration;
         setInterval(() => {
-            many('.showtime').innerHTML = Math.floor(audio.currentTime)+ '/' +Math.floor((date/60))+ ':' + Math.floor(date%60);
+            many('.showtime').innerHTML = Math.floor(audio.currentTime)+ '/'+ Math.floor(date/60)+ ':'+ Math.floor(date%60);
         }, 1000)
     },
     scrollview: function() {
@@ -278,7 +279,7 @@ const app = {
     loaddow: function() {
         heading.textContent = this.currentsong.name
         audio.src = this.currentsong.path
-        
+        cdthumb.style.backgroundImage = `url('${this.currentsong.image}')`
     },
     
     start: function() {
