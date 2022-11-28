@@ -136,7 +136,7 @@ const app = {
                 audio.pause()
             } else {
                 audio.play()
-                _this.audiotime(audio.duration)
+                _this.audiotime()
             }
             
         }
@@ -244,9 +244,16 @@ const app = {
         
     },
     audiotime: function() {
-        let date = audio.duration;
+       
+       
         setInterval(() => {
-            many('.showtime').innerHTML = Math.floor(audio.currentTime)+ '/'+ Math.floor(date/60)+ ':'+ Math.floor(date%60);
+            let date = audio.duration;
+            let audiosub = Math.floor(audio.currentTime);
+            let minit = Math.floor(audio.currentTime/60) < 10 ? Math.floor(audio.currentTime/60) : '';
+            let scod = Math.floor(audio.currentTime%60);
+            let minitscod = `${minit}:${scod}`
+            many('.showtime').innerHTML = minitscod + '/'+ Math.floor(date/60)+ ':'+ Math.floor(date%60);
+            
         }, 1000)
     },
     scrollview: function() {
