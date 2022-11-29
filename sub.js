@@ -45,7 +45,7 @@ const app = {
         {
             name: 'Có Tất Cả Nhưng Thiếu Em',
             singer: 'Erik',
-            path: './music/song2.mp3',
+            path: './music/song8.mp3',
             image: './img/cd10.jpg'
     
         },
@@ -66,7 +66,7 @@ const app = {
         {
             name: 'Đau Ở Đây Này',
             singer: 'NAL',
-            path: './music/song5.mp3',
+            path: './music/song9.mp3',
             image: './img/cd40.jpg'
     
         },
