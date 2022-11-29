@@ -204,11 +204,15 @@ const app = {
             if(_this.isRepeat) {
                 audio.play()
             } else {
+                
                 _this.nextSong()
+                
                 audio.play()
-            }
+                _this.render()
+                _this.scrollview()
+            } 
            
-            
+            // /
         }
         playlist.onclick = function(e) {
             const custom = e.target.closest('.song:not(.active)')
