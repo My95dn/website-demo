@@ -18,8 +18,17 @@ function Validator(option) {
                 if (typeof option.onSubmit === 'function') { 
                     var subonmit = formElement.querySelectorAll('[name]')
                      array = Array.from(subonmit).reduce(function (value, input) {
-                        value[input.name] = input.value;
+                        switch(input.type) {
+                            case 'checkbox':
+                            case 'radio':
+                               value[input.name] = formElement.querySelector('input[name="' + input.name + '"]:checked').value;
+                                break;
+                                default:
+                                    value[input.name] = input.value;
+                        }
+                        
                         return value
+                        
                     },{})
                     option.onSubmit(array)
                 } else {
@@ -94,14 +103,20 @@ function checkValid(option, rule, fuleSelector) {
         switch(ruless.type) {
             case 'radio':
             case 'checkbox':    
-            {
-                 
-                check = subTest[i](
-                    formElement.querySelector(rule.selector + ':checked')
-                    // ông làm lại đi...giờ mún lấy tất cả thằng gender
-               )
-            }
-           
+                {
+                    let checked = null;
+                    let radios = document.querySelectorAll(rule.selector);
+                    radios.forEach(ele => {
+                        
+                        if(ele.checked) checked = ele;
+                    })
+                    if(check) break;
+                    check = subTest[i](
+                        checked
+                         // cais ddo lấy value..... còn y cái này mà làm ko đc nhưng ko sao.. đooi ten lại file html là đc..
+                    )   
+                }
+             
             break;
             default:
                 check = subTest[i](ruless.value)
@@ -109,6 +124,18 @@ function checkValid(option, rule, fuleSelector) {
         
         if (check) break;
     }
+
+    // qua bài mới ông nhỉ...
+    if(ruless.type == 'radio'){
+        let radios = document.querySelectorAll(rule.selector);
+        radios.forEach(ele => {
+            ele.addEventListener('click',() => { 
+                check = undefined
+            }
+        ) })
+        
+    }
+
     let father = Isgetelement(ruless, option.formGroupSelector)
     if (check) {
         subrule.innerText = check;
