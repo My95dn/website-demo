@@ -18,15 +18,24 @@ function Validator(option) {
                 if (typeof option.onSubmit === 'function') { 
                     var subonmit = formElement.querySelectorAll('[name]')
                      array = Array.from(subonmit).reduce(function (value, input) {
-                        value[input.name] = input.value;
+                        switch(input.type) {
+                            case 'checkbox':
+                            case 'radio':
+                               value[input.name] = formElement.querySelector('input[name="' + input.name + '"]:checked').value;
+                                break;
+                                default:
+                                    value[input.name] = input.value;
+                        }
+                        
                         return value
+                        
                     },{})
                     option.onSubmit(array)
                 } else {
                     option.onSubmit()
                 }
                 
-            }// cái nãy ông git làm vậy là gì vậy..
+            }
 
 
         }
@@ -40,7 +49,7 @@ function Validator(option) {
 
             } 
             let ruless = formElement.querySelector(rule.selector)
-            let subrule = Isgetelement(ruless, option.formGroupSelector).querySelector(option.errorSelector);// chỗ này sẽ bị lỗi nếu như... cấu tạo của html bị sai.. thành ra dùng trang khác ko đc... đâu phải lúc nào nó cũng giống cấu trúc như nàyu
+            let subrule = Isgetelement(ruless, option.formGroupSelector).querySelector(option.errorSelector); 
             let father = Isgetelement(ruless, option.formGroupSelector)
 
             if (ruless) {
@@ -84,35 +93,29 @@ function Validator(option) {
 }
 function checkValid(option, rule, fuleSelector) {
     const formElement = document.querySelector(option.form)
-    let ruless = formElement.querySelectorAll(rule.selector)
-    let subrule = Isgetelement(ruless[0], option.formGroupSelector).querySelector(option.errorSelector);
+    let ruless = formElement.querySelector(rule.selector)
+    let subrule = Isgetelement(ruless, option.formGroupSelector).querySelector(option.errorSelector);
     let check;
-    
+
     var subTest = fuleSelector[rule.selector];
-    if(ruless.length > 1){
-        if(ruless[0].type == 'radio') console.log('radio');
-    }
-    for (var i = 0; i < subTest.length; i++) { 
-        switch(ruless[0].type) {
+
+    for (var i = 0; i < subTest.length; i++) {
+        switch(ruless.type) {
             case 'radio':
             case 'checkbox':    
-                {
-                    ruless.forEach(ele => {
-                        if(ele.checked) check = undefined;
-                    })
-
-                    if(check ) check = 'Không để trống'
-                }
+            check = subTest[i](
+                 formElement.querySelector(rule.selector + ':checked')
+                 // chỉ tui cách lấy lại đi ông.. nốt cái này là xong rồi....lay j
+            )
+            console.log(rule.selector)
             break;
             default:
-                { 
-                    check = subTest[i](ruless.value)
-                }
+                check = subTest[i](ruless.value)
         }
         
         if (check) break;
     }
-    let father = Isgetelement(ruless[0], option.formGroupSelector)
+    let father = Isgetelement(ruless, option.formGroupSelector)
     if (check) {
         subrule.innerText = check;
         father.classList.add(option.show);

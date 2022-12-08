@@ -61,15 +61,15 @@
           <div class="form-group">
             <label for="email" class="form-label">Giới tính</label>
             <div>
-            <input class="email2" name="gender" type="radio" value="male" class="form-control">
+            <input id="email2" name="gender" type="radio" value="male" class="form-control">
             nam
           </div>
           <div>
-            <input class="email2" name="gender" type="radio" value="female" class="form-control">
+            <input id="email2" name="gender" type="radio" value="female" class="form-control">
             nữ
           </div>
           <div>
-            <input class="email2" name="gender" type="radio" value="orther" class="form-control">
+            <input id="email2" name="gender" type="radio" value="orther" class="form-control">
             khác
           </div>
             <span class="form-message"></span>
@@ -89,7 +89,7 @@
       <script>
   
         document.addEventListener('DOMContentLoaded', function () {
-         
+          // Mong muốn của chúng ta
           Validator({
             form: '#form-1',
             formGroupSelector: '.form-group',
@@ -105,7 +105,7 @@
               
              
               
-              
+              // Validator.isRequiredd('#password_confirmation'),
               Validator.isConfirmed('#password_confirmation', function () {
                 return document.querySelector('#form-1 #password').value;
               }, 'Mật khẩu nhập lại không chính xác'),
@@ -114,7 +114,7 @@
               
             ],
             onSubmit: function (data) {
-              
+              // Call API  
               console.log(data);
             }
           });
