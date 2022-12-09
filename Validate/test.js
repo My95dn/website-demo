@@ -105,7 +105,7 @@ function checkValid(option, rule, fuleSelector) {
             case 'checkbox':    
             check = subTest[i](
                  formElement.querySelector(rule.selector + ':checked')
-                 // chỉ tui cách lấy lại đi ông.. nốt cái này là xong rồi....lay j
+                 
             )
             console.log(rule.selector)
             break;
