@@ -625,6 +625,9 @@ html {
     width: 85%;
     display: none;
 }
+.img-cart-favorite {
+    width: 100%;
+}
 #content .navbar-img-four {
    width: 85%;
 }

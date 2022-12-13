@@ -5,7 +5,17 @@ var subtext = document.getElementsByTagName("li")[0];
 var know = document.querySelector('.return')
 var up = document.querySelector('delate')
 
-RenderElement(localstorage())
+RenderEle
+}
+
+function delate(id) {
+   if(confirm('bạn có thât sự muốn xóa')) {
+      var delate = localstorage()
+      delate.splice(id, 1)
+      localStorage.setItem('array', JSON.stringify(delate))
+      RenderElement(delate)
+      
+   }ment(localstorage())
 summit.onclick = function() {
    if(!input.value) {
       alert('vui lòng nhập thông tin')
@@ -37,16 +47,6 @@ summit.onclick = function() {
    RenderElement(array)
    
 
-}
-
-function delate(id) {
-   if(confirm('bạn có thât sự muốn xóa')) {
-      var delate = localstorage()
-      delate.splice(id, 1)
-      localStorage.setItem('array', JSON.stringify(delate))
-      RenderElement(delate)
-      
-   }
    
 }
 function update(id) {

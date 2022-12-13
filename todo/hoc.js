@@ -14,7 +14,6 @@ tabItem.forEach((tab, index)=> {
         delay.classList.remove('active')
         this.classList.add('active')
         good.classList.add('active')
-        
+       
     }
 }) 
-    
