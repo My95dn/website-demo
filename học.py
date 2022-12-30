@@ -1,0 +1,3 @@
+# khai báo biến
+Print(đa luồng) //
+# Hàm python...

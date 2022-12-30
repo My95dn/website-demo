@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.header {
+    text-align: center;
+    margin-top: 100px;
+    
+}
+.product {
+    display: flex;
+    padding: 0 30px;
+    justify-content: center;
+    margin: 0 20px;
+    overflow-y: scroll;
+    
+}
+.class {
+    text-align: center;
+    margin-top: 30px;
+    
+}
+.display {
+    display: none;
+}
+img {
+    width: 5%;
+}
+.app {
+    background-color: #ccc;
+    padding-top: 50px;
+    
+}
+.js {
+    width: 500px;
+    height: 50px;
+}
+.js::placeholder {
+    text-align: center;
+}
+ul li {
+    list-style: none;
+}

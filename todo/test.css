@@ -16,3 +16,9 @@ span {
 .return {
     flex-basis: 50%;
 }
+.class {
+    justify-content: center;
+    display: flex;
+    margin-top: 100px;
+    
+}

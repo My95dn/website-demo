@@ -1,0 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.section {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+}
+.js {
+    width: 30px;
+    text-align: center;
+    overflow: hidden;
+}
+button {
+    padding: 0 5px;
+    margin: 0 5px;
+}
