@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+   
+}
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+    animation: fadein 2s ease-in-out infinite;
+    height: 1000px;
+    transition: all 1s;
+}
+@keyframes fadein {
+    from {
+        background: linear-gradient(to right, #7FFFD4, #40E0D0);
+    }
+    to {
+        background: linear-gradient(to bottom, #7FFFD4, #40E0D0);
+    }
+}
+.sub {
+    text-align: center;
+    padding: 20px;
+}
+.header {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    background: linear-gradient(to right, #FF99FF, #00CCFF
+
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.section {
+    font-size: 3rem;
+    background: linear-gradient(to right, #00dbde, #fc00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.app {
+    text-align: center;
+    margin-top: 250px;
+    height: 500px;
+    position: relative;
+}
+.sub-header {
+   position: absolute;
+   left: 25%;
+   padding: 1.2%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: linear-gradient(to right , #FF9966, #009966);
+    cursor: pointer;
+}
+.sub-header:hover {
+    opacity: 0.8;
+}
+.sub-nav {
+    position: absolute;
+    right: 25%;
+    padding: 1.2%;
+    width: 20%;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background: linear-gradient(to right , #FF9966, #009966);
+    cursor: pointer;
+    
+}
+.sub-nav:hover {
+    opacity: 0.8;
+}
+.class {
+    width: 200px;
+    background-color: #fd0242;
+    height: 200px;
+    position: absolute;
+    left: 44%;
+    transform: rotate(45deg);
+    top: 40%;
+    
+    
+    box-shadow: 0 0 50px #fd0242;
+}  
+.selec {
+    animation: love alternate 0.8s  infinite;
+    transition: all 1s;
+    position: absolute;
+    top: 40%;
+    right: 57%;
+    display: none;
+} 
+@keyframes love {
+    0% {
+        transform: scale(1);
+        
+        opacity: 0;
+      
+    }
+    100% {
+        transform: scale(1.2);
+        
+
+        opacity: 1;
+    }
+}
+
+.class::before {
+    content: '';
+    position: absolute;
+    width: 87%;
+    height: 100%;
+    background-color: #fd0242;
+    left: -40%;
+    border-radius: 50%;
+    box-shadow: 0 0 50px #fd0242;
+}
+.class::after {
+    content: '';
+    position: absolute;
+    width: 87%;
+    height: 100%;
+    background-color: #fd0242;
+    right: 0;
+    border-radius: 50%;
+    top: -50%;
+    box-shadow: 0 0 50px #fd0242;
+}

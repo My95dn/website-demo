@@ -4,31 +4,31 @@ const visit = document.querySelector('.visit')
 
 
 
-
 let array = [
     "../img/anh3.jpg",
     "../img/anh4.jpg",
     "../img/anh2.jpg"
 ]
-let value = 0
-function handlElement() {
-    value++
-    if(value >= array.length) {
-        value = 0
+let index = 0
+
+function handleElement() {
+    index++
+    if(index >= array.length) {
+        index = 0
     }
-    img.src = array[value]
+    img.src = array[index]
 }
 visit.onclick = function() {
-    handlElement()
+    handleElement()
 }
-function preelement() {
-    value--
-    if(value < 0) {
-        value = array.length -1
+function preven() {
+    index--
+    if(index < 0) {
+        index = array.length -1
     }
-    img.src = array[value]
+    img.src = array[index]
 }
-sub.onclick = function( ) {
-    preelement()
+sub.onclick = function() {
+    preven()
 }
-setInterval(handlElement, 3000)
+setInterval(handleElement, 3000)
