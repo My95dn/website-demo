@@ -2,6 +2,8 @@ const btn = document.querySelector('.but')
 const btns = document.querySelector('.buts')
 const input = document.querySelector('.js')
 
+
+
  
 btn.onclick = function() {
    input.value++
@@ -17,4 +19,3 @@ input.oninput = function() {
       input.value = 0
    }
 }
- 

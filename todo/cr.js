@@ -12,16 +12,18 @@ sub.onmouseover = function() {
 
 }
 sec.onclick = function() {
-    if(confirm('Mãi Yêu Cậu')) {
+
         father.style.display = 'block'
         
-        sub.style.display = 'none'
-       
+        sub.style.opacity = '0'
+        sub.style.transition = 'all 1s'
         
 
-        section.style.display = 'none'
+        section.style.opacity = '0'
+        section.style.transition = 'all 1s'
+
         
         
 
-    }
+    
 }

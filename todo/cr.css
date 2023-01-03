@@ -9,18 +9,12 @@ html {
     font-family: Arial, Helvetica, sans-serif;
 }
 .container {
-    animation: fadein 2s ease-in-out infinite;
+    
     height: 1000px;
-    transition: all 1s;
+   
+    background: url(../img/sad.jpg) top center / cover no-repeat;
 }
-@keyframes fadein {
-    from {
-        background: linear-gradient(to right, #7FFFD4, #40E0D0);
-    }
-    to {
-        background: linear-gradient(to bottom, #7FFFD4, #40E0D0);
-    }
-}
+
 .sub {
     text-align: center;
     padding: 20px;
@@ -77,39 +71,99 @@ html {
     opacity: 0.8;
 }
 .class {
-    width: 200px;
+    width: 100px;
     background-color: #fd0242;
-    height: 200px;
+    height: 100px;
     position: absolute;
     left: 44%;
     transform: rotate(45deg);
     top: 40%;
-    
-    
+    animation: moveb ease-in-out 2s;
+    transition: all 1s;
     box-shadow: 0 0 50px #fd0242;
 }  
 .selec {
-    animation: love alternate 0.8s  infinite;
+    animation: love 3s ease-in-out infinite;
     transition: all 1s;
     position: absolute;
     top: 40%;
     right: 57%;
     display: none;
+    
 } 
+.salad {
+    animation: car ease-in-out 1.6s; 
+    transition: all 1000s;
+    width: 300px;
+}
 @keyframes love {
     0% {
         transform: scale(1);
         
-        opacity: 0;
+       
       
     }
     100% {
-        transform: scale(1.2);
+        transform: scale(1.5);
         
-
-        opacity: 1;
+        
+       
     }
 }
+@keyframes moveb {
+    0% {
+        transform: translateX(-650%);
+        
+
+    }
+    100% {
+        transform: translateX(0%);
+        
+    }
+}
+@keyframes car {
+    0% {
+        transform: translateX(-255%);
+        
+    }
+    100% {
+        transform: translateX(0%);
+        
+    }
+}
+@keyframes newcar {
+   
+    100% {
+        transform: translateX(-555%);
+        
+
+    }
+     
+}
+@keyframes sec {
+    0% {
+        transform: scale(1);
+        
+       
+      
+    }
+    100% {
+        transform: scale(1);
+        
+        
+       
+    }
+}
+.beautiful {
+    width: 50%;
+    position: relative;
+    top: 45%;
+    left: 37%;
+    transform: translateY(74px);
+   animation: newcar ease-in-out 14s forwards;
+    transition: all 1s;
+}
+
 
 .class::before {
     content: '';
@@ -132,3 +186,4 @@ html {
     top: -50%;
     box-shadow: 0 0 50px #fd0242;
 }
+

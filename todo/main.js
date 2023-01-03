@@ -4,16 +4,16 @@ const resutl = document.querySelector('.return')
 
 
 
-renderElement(local())
+
 btn.onclick = function() {
     let value = input.value
     let ob = {
         name: value
     }
     let array = local()
-    let face = this.getAttribute('id')
-    if(face === 0 || face) {
-        array[face] = ob
+    let father = this.getAttribute('id')
+    if(father === 0 || father) {
+        array[father] = ob
         this.removeAttribute('id')
     } else {
 
@@ -36,17 +36,19 @@ function renderElement(data) {
     ul += `</ul>`
     resutl.innerHTML = ul
 }
-function dalete(id) {
+
+function dalete( id) {
     let sub = local()
     sub.splice(id, 1)
     localStorage.setItem('array', JSON.stringify(sub))
     renderElement(sub)
 }
 function edit(id) {
-    let fa = local()
-    input.value = fa[id].name
+    let sec = local()
+    input.value = sec[id].name
     btn.setAttribute('id', id)
 }
+ 
 function local() {
     return localStorage.getItem('array') ? JSON.parse(localStorage.getItem('array')) : []
 }
